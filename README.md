@@ -1,2 +1,2 @@
 # JenkinsToGithub
-Jenkins to Github deployment using Docker
+Jenkins to Github Pipeline deployment using Docker
