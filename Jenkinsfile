@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
+                cleanWs()
                 echo '[INFO] Cloning Repository'
                 sh 'git clone --depth 1 --single-branch https://github.com/WonderCMS/wondercms.git'
                 sh 'ls wondercms'
@@ -27,7 +28,7 @@ pipeline {
                 // slackSend channel: '#random', message: 'test', teamDomain: 'randomresearchinc.slack.com', tokenCredentialId: 'slack'
                 // cleanWs()
                 // sh 'sh notif.sh'
-                 cleanWs()
+                 
             }
         }
     }
